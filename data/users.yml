@@ -1,0 +1,14 @@
+- family_name: 浅倉
+  given_name: 南
+  gender: female
+  admin: true
+
+- family_name: 上杉
+  given_name: 達也
+  gender: male
+  admin: false
+
+- family_name: 上杉
+  given_name: 和也
+  gender: male
+  admin: false

@@ -1,0 +1,25 @@
+// https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html より引用
+// レスポンシブWebデザインでよく用いられるメディアクエリ（media queries）を、
+// @mixin により、容易に記述する。
+
+$breakpoints: (
+  'tablet':  'screen and (min-width: 481px)',
+  'desktop': 'screen and (min-width: 960px)',
+) !default;
+
+@mixin mq($breakpoint: tablet) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// @mixin 使用例
+// .foo {
+//   color: blue;
+//   @include mq() { // 引数を省略（初期値はtabletの481px）
+//     color: yellow;
+//   }
+//   @include mq(desktop) { // 引数を個別に指定
+//     color: red;
+//   }
+// }

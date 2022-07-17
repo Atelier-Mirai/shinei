@@ -1,0 +1,10 @@
+/* mixin */
+@mixin link_style($color: $kurohairo, $font-size: 14px){
+  color: $color;
+  font-size: $font-size;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    color: darken($color, 30%);
+  }
+}

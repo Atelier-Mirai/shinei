@@ -1,0 +1,43 @@
+/ 上部ナビゲーションメニュー
+.ui.top.fixed.menu.sitepage_header
+  .ui.container
+    = link_to image_tag('sakura_shokai_logo.webp', alt: 'logo', height: '64px'), '/index.html', id: "logo"
+
+    .right.menu
+      .ui.dropdown.item
+        | 会社案内
+        i.dropdown.icon
+        .menu
+          = link_to '経営理念', '#', class: 'ui item'
+          = link_to '会社沿革', '#', class: 'ui item'
+          = link_to '会社概要', '#', class: 'ui item'
+          .divider
+          = link_to '採用情報', '#', class: 'ui item'
+      .ui.dropdown.item
+        | 交通案内
+        i.dropdown.icon
+        .menu
+          = link_to '本社', '#', class: 'ui item'
+          .divider
+          = link_to '支店1', '#', class: 'ui item'
+          = link_to '支店2', '#', class: 'ui item'
+          = link_to '支店3', '#', class: 'ui item'
+      = link_to '使用例紹介', '/kitchen_sink.html', class: 'ui item'
+
+/ 普通のヘッダーデザインの例
+/ header
+/   .logo
+/     a href="index.html"
+/       img src="images/logo.png"
+/       | さくら商会
+/
+/     / 以下のようにも書ける
+/     / = link_to 'index.html' do
+/     /   = image_tag 'logo.png'
+/     /   | さくら商会
+/
+/ nav
+/   ul
+/     li = link_to '会社案内', '#'
+/     li = link_to '交通案内', '#'
+/     li = link_to '使用例紹介', '/kitchen_sink.html'

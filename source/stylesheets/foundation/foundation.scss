@@ -1,0 +1,28 @@
+/*=============================================================================
+  foundation
+  リセットCSS、NormarizeCSSなどの、すべてのベースとなるCSS
+=============================================================================*/
+
+/* modern-css-reset.css
+-----------------------------------------------------------------------------*/
+/* CDN が提供されているので、直接、layouts/top.slim に 書くことも出来る */
+/* <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" /> */
+@import 'modern-css-reset';
+
+/* 2022年に最適なfont-familyの書き方 https://ics.media/entry/200317/
+-----------------------------------------------------------------------------*/
+$font-family: "Helvetica Neue",
+              Arial,
+              "Hiragino Kaku Gothic ProN",
+              "Hiragino Sans",
+              Meiryo,
+              sans-serif;
+
+body {
+  font-family: $font-family;
+}
+
+/* Google Fonts 佑字 粛 を使うと雰囲気が変わります */
+body {
+  font-family: 'Yuji Syuku', serif;
+}

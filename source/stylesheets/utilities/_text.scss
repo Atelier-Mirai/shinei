@@ -1,0 +1,154 @@
+/*=============================================================================
+  テキストの為の飾り付け
+=============================================================================*/
+
+/* 左寄せ指定
+-----------------------------------------------------------------------------*/
+.lefted.text {
+  text-align: left !important;
+}
+
+/* 中央そろえ指定
+-----------------------------------------------------------------------------*/
+.centered.text {
+  text-align: center !important;
+}
+
+/* 右寄せ指定
+-----------------------------------------------------------------------------*/
+.righted.text {
+  text-align: right !important;
+}
+
+/* 大きさ指定
+-----------------------------------------------------------------------------*/
+$sizes: (
+  mini:    0.4rem,
+  tiny:    0.5rem,
+  small:   0.75rem,
+  medium:  1rem,
+  large:   1.5rem,
+  big:     2rem,
+  huge:    4rem,
+  massive: 8rem
+);
+
+@each $name, $value in $sizes {
+  .#{$name}.text {
+    font-size: $value !important;
+  }
+}
+
+/* リードテキスト
+-----------------------------------------------------------------------------*/
+.lead.text {
+  font-size: 1.1rem;
+}
+
+/* 上下に金色の線の見出し
+  CSS見出しデザイン参考100選
+  https://jajaaan.co.jp/css/css-headline/
+-----------------------------------------------------------------------------*/
+.gold.title {
+  position: relative;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
+}
+
+.gold.title::before,
+.gold.title::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: '';
+  background-image: linear-gradient(135deg, #704308 0%, #ffce08 40%, #e1ce08 60%, #704308 100%);
+}
+
+.gold.title::before {
+  top: 0;
+}
+
+.gold.title::after {
+  bottom: 0;
+}
+
+/* 横に黒色の線の見出し
+  CSSのコピペだけ！おしゃれな見出しのデザイン例まとめ68選
+  https://saruwakakun.com/html-css/reference/h-design
+-----------------------------------------------------------------------------*/
+.silver.title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem; }
+  .silver.title span {
+    color: #0d0d0d;
+    background-image: linear-gradient(-45deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #666 100%);
+    text-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+    display: inline-block;
+    width: calc(100% - 40px); }
+@media (min-width: 768px) {
+  .sliver.title span {
+    width: 400px; }
+  .silver.title::before,
+  .silver.title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: calc((100% - 440px) / 2);
+    max-width: 440px;
+    height: 3px;
+  }
+  .silver.title::before {
+    left: 0; }
+  .silver.title::after {
+    right: 0; } }
+
+/* 文字を光りながら出現させるためのCSS
+-----------------------------------------------------------------------------*/
+.glow.text span {
+  opacity: 0;
+}
+
+/* アニメーションで透過度を0から1に変化させ、text-shadowをつける */
+.glow.text.shine span {
+  animation: glow_anime_on 1s ease-out forwards;
+}
+
+@keyframes glow_anime_on {
+    0% { opacity:0; text-shadow: 0 0    0 #fff, 0 0    0 #fff; }
+   50% { opacity:1; text-shadow: 0 0 10px #fff, 0 0 15px #fff; }
+  100% { opacity:1; text-shadow: 0 0    0 #fff, 0 0    0 #fff; }
+}
+
+/* グラデーション
+  CSSでテキストを彩る装飾サンプル集 https://1-notes.com/css-text-design/
+-----------------------------------------------------------------------------*/
+.rainbow.gradation.text {
+  color: transparent;
+  background: repeating-linear-gradient(45deg,
+    #e60012 0.1em 0.2em,
+    #f39800 0.2em 0.3em,
+    #fff100 0.3em 0.4em,
+    #009944 0.4em 0.5em,
+    #0068B7 0.5em 0.6em,
+    #1d2088 0.7em 0.8em,
+    #cfa7cd 0.8em 0.9em);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* 文字にグラデーションを付ける方法 https://kouhekikyozou.com/css_text_gradation
+-----------------------------------------------------------------------------*/
+.gold.gradation.text {
+  color: transparent;
+  background: linear-gradient(90deg, #a38131 0%, #e7c76d 33%, #ffe6c5 62%, #e3c05d 83%, #9d874e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

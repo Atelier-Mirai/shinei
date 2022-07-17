@@ -1,0 +1,6 @@
+- name: タマ
+  image_filename: tama.jpg
+  introduction: タマです。白黒の猫です。
+- name: ミケ
+  image_filename: mike.jpg
+  introduction: ミケです。茶色の猫です。

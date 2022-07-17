@@ -1,0 +1,19 @@
+/*=============================================================================
+  フッター
+=============================================================================*/
+footer {
+  grid-row: foot;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background: $kurohairo;
+
+  p {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    justify-self: center;
+    align-self: center;
+
+    color: $sakurairo;
+  }
+}
