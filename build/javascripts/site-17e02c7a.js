@@ -1,1 +1,0 @@
-$(()=>{$(".ui.dropdown").dropdown({on:"hover"});$(".message .close").on("click",function(){$(this).closest(".message").transition("fade")});$(".show_about").on("click",function(){$(".ui.modal").modal("show")});$(".ui.tabular.menu .item").tab()});

@@ -1,1 +1,0 @@
-$("body").scrollgress({height:"5px",color:"#eb6100"});

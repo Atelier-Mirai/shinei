@@ -1,1 +1,0 @@
-const e=()=>{let e=!1;let i=768;let n=window.innerWidth;let o;n>=i&&!e?(e=!0,o=$(".slider").bxSlider({mode:"vertical",controls:!1,auto:!0,pager:!1})):n<i&&e&&(o.destroySlider(),e=!1)};$(window).on("resize",()=>{e()}),$(window).on("load",()=>{e()}),$("#splash").delay(1500).fadeOut("slow",()=>{e()});
