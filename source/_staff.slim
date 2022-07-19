@@ -1,0 +1,16 @@
+section#staff.scroll-point
+  h2
+    span.bgextend.bgLRextendTrigger
+      span.bgappearTrigger
+        | Staff
+
+  ul.grid.delayScroll
+
+    - data.staff.each do |member|
+      li.staff
+        .image
+          = image_tag "staff/#{member.image}"
+        .content
+          p.name = member.name
+          p.catchphrase = member.catchphrase
+          p.description = member.description

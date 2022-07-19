@@ -10,6 +10,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 10px;
+  max-width: 900px;
 }
 
 .map {
@@ -44,6 +45,9 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
+
+    max-width: 900px;
+    margin: 0 auto;
   }
 
   .map {

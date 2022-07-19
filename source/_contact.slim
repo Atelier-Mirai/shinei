@@ -1,0 +1,44 @@
+section#contact.scroll-point
+  h2
+    span.bgextend.bgLRextendTrigger
+      span.bgappearTrigger
+        | Contact
+  form method="post" action="" enctype="multipart/form-data"
+    ul.form-list.fadeUpTrigger
+      / li
+      /   dl
+      /     dt
+      /       label for="division"
+      /         | 会社名・部署名
+      /     dd
+      /       input#division type="text" name="Division" size="60" value=""
+      li
+        dl
+          dt
+            label for="name"
+              | ご芳名
+          dd
+            input#name type="text" name="Name" size="60" value=""
+      li
+        dl
+          dt
+            label for="email"
+              | メールアドレス
+          dd
+            input#email type="email" name="E-mail" size="60" value=""
+      li
+        dl
+          dt
+            label for="tel"
+              | 電話番号
+          dd
+            input#tel type="text" name="Tel" size="60" value=""
+      li
+        dl
+          dt
+            label for="msg"
+              | お問い合わせ内容
+          dd
+            textarea#msg name="Message" cols="50" rows="5"
+    .submit-btn.fadeUpTrigger
+      input type="submit" name="submit" value="確認"

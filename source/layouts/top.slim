@@ -1,71 +1,91 @@
 doctype html
 html
   head
-    / 文字コードの指定
     meta charset="utf-8"
-    / ビューポート(視野)の記述。(iPhoneでの快適な閲覧用)
     meta name="viewport" content="width=device-width"
-    / 表題の設定 ブラウザのタブに表示される
     title
-      = current_page.data.title || "さくら商会"
+      = current_page.data.title || "株式会社新栄"
 
-    / ファビコン(小さなアイコン)とアップルタッチアイコンの指定
-    / https://ao-system.net/favicongenerator/ で作成できる
     = favicon_tag 'favicon.ico'
     = favicon_tag 'apple-touch-icon-180x180.png',
               rel:   'apple-touch-icon',
               sizes: '180x180',
               type:  'image/png'
 
-    / 検索エンジン用にサイトの紹介文章 目安80文字
-    meta name="description" content="さくら商会はお花見など各種イベントで皆様の楽しい人生を演出しています。"
+    meta name="description" content="新栄は、木材と建築資材の販売を専門として、建築資材と建築用木材をお取り扱いしております。建築資材のトータルアドバイザーとしてお客様にご提案しています。お気軽に御来店下さい。"
 
-    / Font Awesome フォントアイコン(≒絵文字)が使えるようになる
     link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
 
     / Google Fonts より 書道家 片岡佑之さんの手書き書体 佑字 粛
     / https://github.com/Kinutafontfactory/Yuji/blob/master/documentation/documentation.pdf
-    / CSS で font-family: 'Yuji Syuku', serif; として、用いることができます。
+    / CSS font-family: 'Yuji Syuku', serif;
     link rel="preconnect" href="https://fonts.googleapis.com"
     link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"
     link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet"
 
-    / jQuery JavaScriptのための便利なライブラリ
+    / ニューススティッカー
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css"
+
+    / Magnific Popup
+    / link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    / script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    / = stylesheet_link_tag    "magnific-popup-custom"
+    / = javascript_include_tag "magnific-popup-custom"
+
+
+    = stylesheet_link_tag "map"
+    = stylesheet_link_tag "staff"
+
+    / = stylesheet_link_tag "style"
+    link rel="stylesheet" href="stylesheets/reset.css"
+    link rel="stylesheet" href="stylesheets/parts.css"
+    link rel="stylesheet" href="stylesheets/layout.css"
+
+    css:
+      .hidden {
+        display: none;
+      }
+
+    / jQuery
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 
-    / Fomantic-UI CSSフレームワーク
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.js"
 
-    / Magnific Popup 写真をクリックして拡大、ギャラリー機能
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-    = stylesheet_link_tag    "magnific-popup-custom"
-    = javascript_include_tag "magnific-popup-custom"
-
-    / Smooth Scroll ページ内リンクをクリックすると滑らかにスクロールする
-    script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
-
-    / このサイトのためのスタイルシートを読み込む (style.cssを読み込む)
-    = stylesheet_link_tag "style"
-
-    / このサイトのためのJavaScriptを読み込む (site.jsを読み込む)
-    = javascript_include_tag "site"
-
-  / トップページ専用デザインを作りやすいよう、top クラスを付与
   body.top
-    / 部分ファイル _header.slim を読み込む
-    = partial 'header'
+    / = partial 'header'
 
-    / この = yield が、index.html.slim等、各々の内容に置き換えられる
-    main
-      = yield
+    = yield
 
-    / 部分ファイル _footer.slim を読み込む
-    = partial 'footer'
+    / = partial 'footer'
 
-    // スムーススクロール
-    javascript:
-      let scroll = new SmoothScroll('a[href*="#"]', {
-        easing:'easeInOutQuint'
-      })
+    / Smooth Scroll
+    script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
+    = javascript_include_tag "smooth-scroll-custom"
+
+
+    = javascript_include_tag "shinei"
+
+    / 機能編 9-1-5 スクロールをするとエリアの高さに合わせて線が伸びる
+    script src="https://cdnjs.cloudflare.com/ajax/libs/scrollgress/2.0.0/scrollgress.min.js"
+    = javascript_include_tag "scrollgress-custom"
+
+    / 先頭へ戻る
+    = javascript_include_tag "page_top"
+    / アコーディオン
+    = javascript_include_tag "accordion"
+    / メニュー
+    = javascript_include_tag "menu"
+
+    / ニューススティッカー
+    script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"
+    = javascript_include_tag "news_sticker"
+
+    / ナビゲーションを現在表示しているコンテンツに応じてハイライトする
+    = javascript_include_tag "position_highlight"
+
+    / Muuri
+    script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.9.5/muuri.min.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"
+    = javascript_include_tag "staff"
+
+    / ナビゲーションをクリックした際のスムーススクロール
+    / = javascript_include_tag "smooth_scroll"
