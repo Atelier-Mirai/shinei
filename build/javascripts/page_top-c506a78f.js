@@ -1,0 +1,1 @@
+const o=()=>{let o=$(window).scrollTop();o>=200?($("#page-top").removeClass("RightMove"),$("#page-top").addClass("LeftMove")):$("#page-top").hasClass("LeftMove")&&($("#page-top").removeClass("LeftMove"),$("#page-top").addClass("RightMove"))};$("#page-top").on("click",()=>{$("body,html").animate({scrollTop:0},500);return!1});

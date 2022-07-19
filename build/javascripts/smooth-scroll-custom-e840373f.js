@@ -1,0 +1,1 @@
+let e=new SmoothScroll('a[href*="#"]',{easing:"easeInOutQuint"});

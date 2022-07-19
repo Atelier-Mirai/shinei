@@ -1,0 +1,1 @@
+$(".openbtn").on("click",()=>{$(this).toggleClass("active");$("#g-nav").toggleClass("panelactive")}),$("#g-nav a").on("click",()=>{$(".openbtn").removeClass("active");$("#g-nav").removeClass("panelactive")});
