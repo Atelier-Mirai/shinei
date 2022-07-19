@@ -99,7 +99,8 @@ h1 {
   top: 40%;
   left: 5%;
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
+  width: 180px;
 }
 
 @media (max-width:550px) {
@@ -135,6 +136,7 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.5;
+  width: 100%;
 }
 
 .top-lead span.bgLRextend::before {
