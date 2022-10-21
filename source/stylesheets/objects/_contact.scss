@@ -1,0 +1,128 @@
+/*  contact  */
+#contact {
+  margin: 0 0 100px 0;
+
+  h2 {
+    text-align: center;
+    margin: 0 0 100px 0;
+    color: #eb6101;
+  }
+
+  .form-list {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 550px) {
+  #contact h2 {
+    margin: 0 0 50px 0;
+  }
+}
+
+button, textarea, select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+
+#contact .form-list {
+  input {
+    &[type='text'], &[type='email'] {
+      width: 100%;
+      border: 1px solid #666;
+      background: #fff;
+      padding: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid #666;
+    background: #fff;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input[type='text'] {
+    height: 50px;
+  }
+}
+
+input[type='email'] {
+  height: 50px;
+}
+
+#contact {
+  .submit-btn {
+    width: 152px;
+    margin: 0 auto;
+  }
+
+  input[type='submit'] {
+    border: 2px solid #333;
+    color: #333;
+    text-align: center;
+    padding: 5px 20px;
+    width: 152px;
+    margin: 0 auto;
+    transition: all .3s;
+
+    &:hover {
+      background: #333;
+      color: #fff;
+    }
+  }
+
+  .form-list {
+    dl {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 0 20px 0;
+    }
+
+    dt {
+      width: 30%;
+    }
+
+    dd {
+      width: 66%;
+    }
+
+    textarea {
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .form-list {
+    dt {
+      margin: 0 0 10px 0;
+      width: 100%;
+    }
+
+    dd {
+      width: 100%;
+    }
+  }
+}

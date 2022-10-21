@@ -5,7 +5,7 @@ class String
   end
 
   def to_amazon_book_image
-    "http://images-jp.amazon.com/images/P/#{self}.09.LZZZZZZZ.jpg"
+    "http://images-jp.amazon.com/images/P/#{self}.09.LZZZZZZZ.webp"
   end
 end
 
@@ -50,7 +50,13 @@ def table_of_users(users)
         end
       end
     end
+
+    m.style do
+      m << 'table { color: green; }'
+    end
   end
+
+
 end
 
 # 日本語版 loremメソッド

@@ -3,11 +3,12 @@
 // @mixin により、容易に記述する。
 
 $breakpoints: (
-  'tablet':  'screen and (min-width: 481px)',
-  'desktop': 'screen and (min-width: 960px)',
+  // 'tablet':  'screen and (min-width: 481px)',
+  // 'desktop': 'screen and (min-width: 960px)',
+  'desktop': '(min-width: 768px)',
 ) !default;
 
-@mixin mq($breakpoint: tablet) {
+@mixin mq($breakpoint: desktop) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }

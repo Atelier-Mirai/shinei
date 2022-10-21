@@ -1,3 +1,5 @@
+@import "../utilities/media_query";
+
 /*=============================================================================
   foundation
   リセットCSS、NormarizeCSSなどの、すべてのベースとなるCSS
@@ -22,7 +24,23 @@ body {
   font-family: $font-family;
 }
 
-/* Google Fonts 佑字 粛 を使うと雰囲気が変わります */
+/* Google Fonts 佑字 粛 を使う */
 body {
   font-family: 'Yuji Syuku', serif;
+}
+
+body {
+  color: $kurohairo;
+  font-size: 0.9rem;
+  line-height: 1.05;
+   overflow-wrap: break-word;
+
+  @include mq() {
+    font-size: 1rem;
+  }
+}
+
+a {
+  color: $kurohairo;
+  text-decoration: none;
 }

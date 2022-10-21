@@ -114,10 +114,10 @@ GEM
       tilt (>= 2.0.6, < 2.1)
     temple (0.8.2)
     thor (1.2.1)
-    tilt (2.0.10)
+    tilt (2.0.11)
     toml (0.3.0)
       parslet (>= 1.8.0, < 3.0.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -128,6 +128,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  fastimage
   middleman
   middleman-autoprefixer
   middleman-livereload

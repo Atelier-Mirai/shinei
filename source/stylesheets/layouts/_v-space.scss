@@ -1,0 +1,3 @@
+@mixin v-space {
+  padding: clamp(90px, 9vw, 120px) 0;
+}

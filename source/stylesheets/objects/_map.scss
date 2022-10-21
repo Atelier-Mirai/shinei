@@ -5,12 +5,14 @@
 =============================================================================*/
 
 .container {
-  /* iPhone では、一列 x 二行 で配置します */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 10px;
-  max-width: 900px;
+
+  max-width: 96%;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .map {
@@ -24,8 +26,6 @@
 }
 
 .map {
-  /* 縦横比の指定 */
-  /* iPhone では、縦長(横2に対して縦3の比率)で表示します */
   aspect-ratio: 2 / 3;
 }
 
@@ -41,13 +41,13 @@
 @media (min-width: 768px) {
 
   .container {
-    /* Mac では、二列 x 一行 で配置します */
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
 
     max-width: 900px;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
 
   .map {
@@ -61,8 +61,6 @@
   }
 
   .map {
-    /* 縦横比の指定 */
-    /* Mac では、横長(横16に対して縦9の比率)で表示します */
     aspect-ratio: 16 / 9;
   }
 }

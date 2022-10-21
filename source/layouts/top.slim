@@ -26,41 +26,18 @@ html
     / ニューススティッカー
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css"
 
-    / Magnific Popup
-    / link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-    / script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-    / = stylesheet_link_tag    "magnific-popup-custom"
-    / = javascript_include_tag "magnific-popup-custom"
+    / スタイル読み込み
+    = stylesheet_link_tag "style"
 
-
-    = stylesheet_link_tag "map"
-    = stylesheet_link_tag "staff"
-
-    / = stylesheet_link_tag "style"
-    link rel="stylesheet" href="stylesheets/reset.css"
-    link rel="stylesheet" href="stylesheets/parts.css"
-    link rel="stylesheet" href="stylesheets/layout.css"
-
-    css:
-      .hidden {
-        display: none;
-      }
+  body.top
+    = yield
 
     / jQuery
     script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 
-
-  body.top
-    / = partial 'header'
-
-    = yield
-
-    / = partial 'footer'
-
     / Smooth Scroll
     script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"
     = javascript_include_tag "smooth-scroll-custom"
-
 
     = javascript_include_tag "shinei"
 
@@ -82,10 +59,5 @@ html
     / ナビゲーションを現在表示しているコンテンツに応じてハイライトする
     = javascript_include_tag "position_highlight"
 
-    / Muuri
-    script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.9.5/muuri.min.js"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.2/web-animations.min.js"
+    / Staff が 動きを伴って現れる
     = javascript_include_tag "staff"
-
-    / ナビゲーションをクリックした際のスムーススクロール
-    / = javascript_include_tag "smooth_scroll"

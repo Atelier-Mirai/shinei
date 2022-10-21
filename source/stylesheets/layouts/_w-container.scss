@@ -1,0 +1,23 @@
+@mixin w-container {
+  display: grid;
+  grid-template-columns:
+    minmax(4%, 1fr)
+    minmax(auto, 1166px)
+    minmax(4%, 1fr);
+
+  & > * {
+    grid-column: 2;
+  }
+}
+
+@mixin w-container-for-content {
+  display: grid;
+  grid-template-columns:
+    minmax(4%, 1fr)
+    minmax(auto, 720px)
+    minmax(4%, 1fr);
+
+  & > * {
+    grid-column: 2;
+  }
+}

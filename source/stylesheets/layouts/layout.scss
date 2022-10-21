@@ -4,43 +4,43 @@
 =============================================================================*/
 
 /* CSS グリッドにより ページ全体の配置を設定する */
-body.top {
-  display: grid;
-  grid-template-columns: 20px 1fr 20px; /* 左右に 20px の余白 を取る */
-  grid-template-rows: [head] 66px
-                      [main] auto
-                      [foot] 66px;
-  row-gap: 20px;
-}
-
-body.top > * {
-  grid-column: 2 / -2;
-}
-
-body.top main {
-  margin-top: -20px;
-  grid-row: main;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  .post       { grid-row: 1; }
-  .photograph { grid-row: 2; }
-}
-
-body.top footer {
-  grid-row: foot;
-  grid-column: 1 / -1;
-}
-
-/* デスクトップ環境 */
-@media(min-width: 768px) {
-  body.top {
-    /* 中央は6列 */
-    grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
-    column-gap: 5%;
-  }
-}
+// body.top {
+//   display: grid;
+//   grid-template-columns: 20px 1fr 20px; /* 左右に 20px の余白 を取る */
+//   grid-template-rows: [head] 66px
+//                       [main] auto
+//                       [foot] 66px;
+//   row-gap: 20px;
+// }
+//
+// body.top > * {
+//   grid-column: 2 / -2;
+// }
+//
+// body.top main {
+//   margin-top: -20px;
+//   grid-row: main;
+//
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto auto;
+//   .post       { grid-row: 1; }
+//   .photograph { grid-row: 2; }
+// }
+//
+// body.top footer {
+//   grid-row: foot;
+//   grid-column: 1 / -1;
+// }
+//
+// /* デスクトップ環境 */
+// @media(min-width: 768px) {
+//   body.top {
+//     /* 中央は6列 */
+//     grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
+//     column-gap: 5%;
+//   }
+// }
 
 /* このような配置のためのCSSをお好みでいろいろ記述 */
 

@@ -2,12 +2,20 @@
   object
   ページをまたいで使われる各種パーツを定義するクラス
 =============================================================================*/
-@import '../utilities/utility';
+@import "../utilities/utility";
 
-@import 'button';
-@import 'footer';
-@import 'frame';
-@import 'header';
-@import 'map';
-@import 'photograph';
-@import 'post';
+@import "about";
+@import "button";
+@import "contact";
+@import "faq";
+@import "footer";
+@import "frame";
+@import "header";
+@import "map";
+@import "photograph";
+@import "post";
+@import "splash";
+@import "staff";
+@import "service";
+@import "topics";
+@import "vision";

@@ -18,3 +18,6 @@ gem "middleman-minify-html"
 
 # html_builder(DSL)用にnokogiriも入れる
 gem "nokogiri"
+
+# img タグに width属性, height属性を付与する為に
+gem "fastimage"
