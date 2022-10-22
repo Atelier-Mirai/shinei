@@ -7,10 +7,12 @@
   margin: 0 0 100px 0;
 
   .img {
-    width: 40%;
+    width: 45%;
     min-height: 590px;
     background: url("../images/souko.webp") no-repeat center;
+    // background: url("../images/shinei.webp") no-repeat center;
     background-size: cover;
+    background-position: left top;
   }
 
   .content {

@@ -313,6 +313,8 @@ h2 {
   font-weight: bold;
   line-height: 1.5;
   width: 100%;
+  color: var(--nanohanairo);
+  font-family: 'Rampart One', cursive;
 
   span.bgLRextend::before {
     background: #333;
@@ -762,21 +764,30 @@ h2 {
     content: '';
     position: fixed;
     top: 10vh;
-    left: 5%;
+    // left: 5%;
     z-index: -1;
-    width: 90%;
-    height: 80vh;
+    // width: 90%;
+    width: 100%;
+    // height: 80vh;
+    height: 100vh;
 
     /* 背景画像設定 */
     background: url("../images/shinei.webp") no-repeat center;
+    // background: url("../images/souko.webp") no-repeat center;
     background-size: cover;
+    background-position: left top;
   }
 }
 
 @media screen and (max-width: 768px) {
   #top-main:before {
     background-position: top center;
-    background-size: auto 90%;
+    background-size: auto 80%;
+    background-size: auto 100%;
+    // background-size: auto auto;
+    // background-size: contain;
+    // background-size: cover;
+    background-position: 25% 50%;
   }
 }
 
