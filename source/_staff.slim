@@ -8,8 +8,8 @@ section#staff.scroll-point
 
     - data.staff.each do |member|
       li.staff
-        .image
-          = image_tag "staff/#{member.image}"
+        / .image
+        /   = image_tag "staff/#{member.image}"
         .content
           p.name = member.name
           p.catchphrase = member.catchphrase
